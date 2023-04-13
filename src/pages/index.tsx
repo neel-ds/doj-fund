@@ -101,18 +101,18 @@ export default function Home() {
         <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
           <FeatureCard
             icon={<BsFillFileEarmarkLockFill size={25} />}
-            title="Zero-knowledge Proof"
-            desc="Products are operated only by authorized entity leveraging SSI. It adds extra security layer over role's permission."
+            title="Cross-Chain EVM Layer"
+            desc="Allow users from multiple chain to pool in assets and share token amount in this cross-chain dapp"
           />
           <FeatureCard
             icon={<MdSecurity size={25} />}
             title="Security"
-            desc="Everything on-chain! Prevent any forgery and errors while authenticating a product. No one can change provenance except the authorized person."
+            desc="Everything on-chain! Prevent any forgery and errors while holding asset. Hermes help to drive this feature smootly leveraging multiple signatures."
           />
           <FeatureCard
             icon={<BsFillCheckCircleFill size={25} />}
-            title="Verification"
-            desc="It also ensures that the right person is adding or updating the product. User can explore the listed products and check the provenance."
+            title="Ease-to-use"
+            desc="It is designed to on-board creators regardless any background and even campaigns to drive the donation camp."
           />
         </dl>
       </div>

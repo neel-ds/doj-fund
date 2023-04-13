@@ -34,7 +34,6 @@ export const Form = () => {
   const [linkedinUrl, setLinkedinUrl] = useState("");
   const [twitterUrl, setTwitterUrl] = useState("");
   const [githubUrl, setGithubUrl] = useState("");
-  
 
   const [loading, setLoading] = useState(true);
 
@@ -113,12 +112,13 @@ export const Form = () => {
                   <Heading
                     lineHeight={1.1}
                     fontSize={{ base: "2xl", sm: "3xl" }}
+                    color={"gray.600"}
                   >
-                    Create your page
+                    Design your value
                   </Heading>
                   <form>
                     <FormControl id="userProfile">
-                      <FormLabel>User Icon</FormLabel>
+                      <FormLabel color={"#732fff"}>User Icon</FormLabel>
                       <Stack direction={["column", "row"]} spacing={6}>
                         <Center>
                           <Avatar
@@ -133,6 +133,8 @@ export const Form = () => {
                             borderColor={"gray.800"}
                             _hover={{ borderColor: "blue.800", border: "2px" }}
                             p={1}
+                            _placeholder={{ color: "gray.500" }}
+                            color={"gray.600"}
                             colorScheme="blue"
                             variant="outline"
                             w="full"
@@ -149,12 +151,13 @@ export const Form = () => {
                   </form>
 
                   <FormControl id="username" isRequired>
-                    <FormLabel>Username</FormLabel>
+                    <FormLabel color={"#732fff"}>Username</FormLabel>
                     <Input
-                      _hover={{ borderColor: "blue.800", border: "2px" }}
+                      _hover={{ borderColor: "blue", border: "2px" }}
                       placeholder="Username"
                       borderColor={"gray.800"}
                       _placeholder={{ color: "gray.500" }}
+                      color={"gray.800"}
                       type="text"
                       onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                         setUserName(e.target.value)
@@ -164,12 +167,13 @@ export const Form = () => {
                   </FormControl>
 
                   <FormControl id="name" isRequired>
-                    <FormLabel>Name</FormLabel>
+                    <FormLabel color={"#732fff"}>Name</FormLabel>
                     <Input
-                      _hover={{ borderColor: "blue.800", border: "2px" }}
+                      _hover={{ borderColor: "blue", border: "2px" }}
                       placeholder="Name"
                       borderColor={"gray.800"}
                       _placeholder={{ color: "gray.500" }}
+                      color={"gray.800"}
                       type="text"
                       onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                         setName(e.target.value)
@@ -179,20 +183,14 @@ export const Form = () => {
                   </FormControl>
 
                   <FormControl id="email">
-                    <FormLabel
-                      color="gray.700"
-                      _dark={{
-                        color: "gray.50",
-                      }}
-                    >
-                      Bio
-                    </FormLabel>
+                    <FormLabel color={"#732fff"}>Bio</FormLabel>
                     <Textarea
                       onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
                         setBio(e.target.value)
                       }
                       placeholder="Write your bio"
                       borderColor={"gray.800"}
+                      color={"gray.800"}
                       mt={1}
                       rows={3}
                       shadow="sm"
@@ -220,16 +218,18 @@ export const Form = () => {
                   <Heading
                     lineHeight={1.1}
                     fontSize={{ base: "2xl", sm: "3xl" }}
+                    color={"gray.600"}
                   >
-                    Create your page
+                    You&apos;re almost there
                   </Heading>
                   <FormControl id="userEmail" isRequired>
-                    <FormLabel>Email address</FormLabel>
+                    <FormLabel color={"#732fff"}>Email address</FormLabel>
                     <Input
                       _hover={{ borderColor: "blue.800", border: "2px" }}
                       placeholder="your-email@example.com"
                       borderColor={"gray.800"}
                       _placeholder={{ color: "gray.500" }}
+                      color={"gray.800"}
                       type="email"
                       onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                         setEmail(e.target.value)
@@ -244,18 +244,11 @@ export const Form = () => {
                       as={GridItem}
                       colSpan={[3, 2]}
                     >
-                      <FormLabel
-                        color="gray.700"
-                        _dark={{
-                          color: "gray.50",
-                        }}
-                      >
-                        Linkedin URL
-                      </FormLabel>
+                      <FormLabel color={"#732fff"}>Linkedin URL</FormLabel>
                       <InputGroup borderColor={"gray.800"}>
                         <InputLeftAddon
-                          bg="gray.100"
-                          color="gray.500"
+                          bg="gray.500"
+                          color="gray.100"
                           rounded="md"
                         >
                           https://
@@ -264,6 +257,7 @@ export const Form = () => {
                           type="tel"
                           placeholder="linkedin.com/in/username"
                           focusBorderColor="brand.400"
+                          color="gray.700"
                           rounded="md"
                           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                             setLinkedinUrl(e.target.value)
@@ -276,18 +270,11 @@ export const Form = () => {
 
                   <SimpleGrid>
                     <FormControl id="twitterUrl" as={GridItem} colSpan={[3, 2]}>
-                      <FormLabel
-                        color="gray.700"
-                        _dark={{
-                          color: "gray.50",
-                        }}
-                      >
-                        Twitter URL
-                      </FormLabel>
+                      <FormLabel color={"#732fff"}>Twitter URL</FormLabel>
                       <InputGroup borderColor={"gray.800"}>
                         <InputLeftAddon
-                          bg="gray.100"
-                          color="gray.500"
+                          bg="gray.500"
+                          color="gray.100"
                           rounded="md"
                         >
                           https://
@@ -296,6 +283,7 @@ export const Form = () => {
                           type="tel"
                           placeholder="twitter.com/username"
                           focusBorderColor="brand.400"
+                          color="gray.700"
                           rounded="md"
                           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                             setTwitterUrl(e.target.value)
@@ -308,11 +296,11 @@ export const Form = () => {
 
                   <SimpleGrid>
                     <FormControl id="githubUrl" as={GridItem} colSpan={[3, 2]}>
-                      <FormLabel color="gray.700">GitHub URL</FormLabel>
+                      <FormLabel color={"#732fff"}>GitHub URL</FormLabel>
                       <InputGroup borderColor={"gray.800"}>
                         <InputLeftAddon
-                          bg="gray.100"
-                          color="gray.500"
+                          bg="gray.500"
+                          color="gray.100"
                           rounded="md"
                         >
                           https://
@@ -321,6 +309,7 @@ export const Form = () => {
                           type="tel"
                           placeholder="github.com/username"
                           focusBorderColor="brand.400"
+                          color="gray.700"
                           rounded="md"
                           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                             setGithubUrl(e.target.value)
@@ -345,7 +334,7 @@ export const Form = () => {
                     setProgress(progress - 50);
                   }}
                   isDisabled={step === 1}
-                  colorScheme="teal"
+                  colorScheme="purple"
                   variant="solid"
                   w="7rem"
                   mr="5%"
@@ -363,21 +352,20 @@ export const Form = () => {
                       setProgress(progress + 50);
                     }
                   }}
-                  colorScheme="teal"
-                  variant="outline"
+                  colorScheme="purple"
+                  variant="solid"
                 >
                   Next
                 </Button>
               </Flex>
               {step === 2 ? (
                 <Button
-                  bg={"blue.800"}
-                  color={"white"}
+                  bg={"purple.500"}
+                  //   colorScheme="purple"
+                  color={"gray.100"}
+                  _hover={{ bg: "#732fff", color: "gray.100" }}
                   w="9rem"
                   type="submit"
-                  _hover={{
-                    bg: "blue.500",
-                  }}
                   onClick={send}
                 >
                   Create Profile

@@ -1,11 +1,4 @@
-import {
-  Card,
-  CardBody,
-  CardHeader,
-  Center,
-  Container,
-  Heading,
-} from "@chakra-ui/react";
+import { Card, CardBody, CardHeader, Heading } from "@chakra-ui/react";
 import Head from "next/head";
 import Header from "@/components/title";
 import React, { useEffect, useState } from "react";
@@ -23,9 +16,7 @@ interface txnDetails {
 
 export default function Dashboard() {
   const [txn, setTxn] = useState<txnDetails[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
   const { address, isConnected } = useAccount();
-
   const contractAbi = "";
 
   const getTxn = async () => {
@@ -68,8 +59,6 @@ export default function Dashboard() {
       <main className="px-4 md:px-0 my-8 mx-auto max-w-[1080px]">
         <div className="max-w-7xl pt-5 pb-5 mx-auto">
           <Header heading="Transactions" />
-
-        <Container maxW={"container.md"} className={"bg-white"}>
           <Card className="bg-white/30">
             <CardHeader>
               <Heading size="md">Transactions</Heading>
@@ -78,10 +67,8 @@ export default function Dashboard() {
               {txn.length > 0 && isConnected && <TxnCard txn={txn} />}
             </CardBody>
           </Card>
-        </Container>      
-      </div>
+        </div>
       </main>
-      </>
-    
+    </>
   );
 }
