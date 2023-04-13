@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
-import Header from "@/components/header";
+import Header from "@/components/navbar";
 import { WagmiConfig } from "wagmi";
 import { client } from "../utils/wagmi";
 import { ConnectKitProvider } from "connectkit";

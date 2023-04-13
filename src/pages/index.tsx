@@ -40,7 +40,7 @@ export default function Home() {
             color={"gray.700"}
           >
             Make money from <br />
-            <Text as={"span"} color={"#a13bf7"}>
+            <Text as={"span"} className={"text-transparent bg-clip-text bg-gradient-to-r from-[#a13bf7] to-[#732fff]"}>
               your audience
             </Text>
           </Heading>
@@ -59,12 +59,9 @@ export default function Home() {
             <Button
               colorScheme={"white"}
               color={"white"}
-              bg={"#a13bf7"}
+              className={"bg-gradient-to-r from-[#a13bf7] to-[#732fff] hover:bg-gradient-to-b from-[#8b00ff] to-[#a75eff]"}
               rounded={"full"}
               px={6}
-              _hover={{
-                bg: "#732fff",  
-              }}
               onClick={() => {
                 router.push("/createprofile");
               }}
