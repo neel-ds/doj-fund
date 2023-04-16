@@ -11,8 +11,11 @@ import {
   createIcon,
 } from "@chakra-ui/react";
 import FeatureCard from "@/components/card";
-import { BsFillFileEarmarkLockFill, BsFillCheckCircleFill } from 'react-icons/bs';
-import { MdSecurity } from 'react-icons/md';
+import {
+  BsFillFileEarmarkLockFill,
+  BsFillCheckCircleFill,
+} from "react-icons/bs";
+import { MdSecurity } from "react-icons/md";
 import { useRouter } from "next/router";
 
 export default function Home() {
@@ -31,23 +34,37 @@ export default function Home() {
           as={Box}
           textAlign={"center"}
           spacing={{ base: 8, md: 14 }}
-          py={{ base: 20, md: 36 }}
+          py={{ base: 20, md: 20 }}
         >
           <Heading
             fontWeight={600}
-            fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
+            fontSize={{ base: "xl", sm: "3xl", md: "5xl" }}
             lineHeight={"110%"}
             color={"gray.700"}
           >
-            Make money from <br />
-            <Text as={"span"} className={"text-transparent bg-clip-text bg-gradient-to-r from-[#a13bf7] to-[#732fff]"}>
-              your audience
+            Create your{" "}
+            <Text
+              as={"span"}
+              bgGradient="linear(to-tr, #a13bf7, #732fff)"
+              bgClip="text"
+              fontWeight="extrabold"
+            >
+              on-chain
+            </Text>{" "}
+            profile <br /> over{" "}
+            <Text
+              as={"span"}
+              bgGradient="linear(to-bl, #a13bf7, #732fff)"
+              bgClip="text"
+              fontWeight="extrabold"
+            >
+              Dojima Network
             </Text>
           </Heading>
-          <Text color={"gray.600"}>
-            Monetize your content by charging your most loyal readers and reward
-            them loyalty points. Give back to your loyal readers by granting
-            them access to your pre-releases and sneak-peaks.
+          <Text color={"gray.900"} fontSize="xl">
+            Built for creators like you! Launch creative profile on-chain by listing your SM links & Proof of work in an unique way. Get <b>DOJ</b> right into your wallet from
+            your audience. <br />
+            Proudly made on Dojima Network!
           </Text>
           <Stack
             direction={"column"}
@@ -59,7 +76,9 @@ export default function Home() {
             <Button
               colorScheme={"white"}
               color={"white"}
-              className={"bg-gradient-to-r from-[#a13bf7] to-[#732fff] hover:bg-gradient-to-b from-[#8b00ff] to-[#a75eff]"}
+              className={
+                "bg-gradient-to-r from-[#a13bf7] to-[#732fff] hover:bg-gradient-to-b from-[#8b00ff] to-[#a75eff]"
+              }
               rounded={"full"}
               px={6}
               onClick={() => {
@@ -101,8 +120,8 @@ export default function Home() {
         <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
           <FeatureCard
             icon={<BsFillFileEarmarkLockFill size={25} />}
-            title="Cross-Chain EVM Layer"
-            desc="Allow users from multiple chain to pool in assets and share token amount in this cross-chain dapp"
+            title="Why Dojima?"
+            desc="Cross-Chain EVM Layer allows users from multiple chain to pool in assets and share token amount in this dapp. It has middle-ground layer."
           />
           <FeatureCard
             icon={<MdSecurity size={25} />}

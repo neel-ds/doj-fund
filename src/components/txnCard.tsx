@@ -2,10 +2,9 @@ import { Box, Flex, Stack, StackDivider, Text } from "@chakra-ui/react";
 import React from "react";
 
 interface txnDetails {
-  from: string;
-  txn: string;
-  matic: string;
+  amount: number;
   message: string;
+  senderAddress: string;
   timestamp: number;
 }
 
@@ -13,18 +12,18 @@ export default function TxnCard({ txn }: { txn: txnDetails[] }) {
   return (
     <>
       {txn.map((item, index) => (
-        <Stack divider={<StackDivider />} key="" spacing="2">
+        <Stack divider={<StackDivider bgColor={"gray.500"}/>} key="" spacing="2">
           <Box>
             <Flex alignItems={"center"}>
               <Box>
-                <Text fontSize={"md"}>Address: {item.from}</Text>
+                <Text fontSize={"md"} color={"gray.700"}><b>From:</b> {item.senderAddress}</Text>
               </Box>
             </Flex>
-            <Box justifyContent={"end"} alignContent={"end"}>
-              Matic {item.matic}
+            <Box justifyContent={"end"} alignContent={"end"} color={"gray.700"}>
+              <b>Amount: </b> {item.amount} DOJ
             </Box>
-            <Text pt="2" fontSize="md" fontWeight={"bold"}>
-              {item.message}
+            <Text pt="2" fontSize="md" color={"gray.600"}>
+            <b>Message: </b>  {item.message}
             </Text>
           </Box>
           <br></br>
