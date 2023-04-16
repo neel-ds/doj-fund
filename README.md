@@ -1,6 +1,8 @@
 # DOJ Fund
 DOJ Fund is built for creators and organisers like you. Create your own on-chain profile by providing your proof of work or social media links. Are you tired from convenience fees of buymeacoffee then no worries DOJ Fund supports cross-chain EVM layer to receive DOJ right into your wallet easily. It's secure and efficient to receive any token. Using Dojima network makes us unique and reliable platform to brag your social profile on-chain.
 
+<img width="1436" alt="DOJ Fund" src="https://user-images.githubusercontent.com/79443588/232288412-d2bfa93f-8e82-46da-8334-7f190866e471.png">
+
 ## Prerequisites
 
 Every user must have Metamask wallet to interact with this product. Checkout how to create Metamask wallet from [here](https://polygon.technology/blog/getting-started-with-metamask-on-polygon). To use this platform, kindly add the Dojima network from [here](https://wallet.dojima.network/wallet/get-started). 
